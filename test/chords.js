@@ -1,4 +1,4 @@
-var vows = require('vows'),
+let vows = require('vows'),
     assert = require('assert'),
     teoria = require('../');
 
