@@ -1,4 +1,4 @@
-var vows = require('vows'),
+let vows = require('vows'),
     assert = require('assert'),
     teoria = require('../');
 
@@ -71,26 +71,26 @@ vows.describe('TeoriaNote class').addBatch({
     },
 
     'The interval between C#5 and A4 is a major third': function(note) {
-      var a4 = teoria.note('A4');
+      let a4 = teoria.note('A4');
 
       assert.deepEqual(note.interval(a4), teoria.interval('M-3'));
     },
 
     'The interval between C#5 and Eb6 is diminished tenth': function(note) {
-      var eb6 = teoria.note('Eb6');
+      let eb6 = teoria.note('Eb6');
 
       assert.deepEqual(note.interval(eb6), teoria.interval('d10'));
     },
 
     'An diminished fifth away from C#5 is G5': function(note) {
-      var g5 = teoria.note('G5');
+      let g5 = teoria.note('G5');
 
       assert.deepEqual(note.interval('d5'), g5);
     },
 
     'The interval between C#4 and Db4 is a diminished second': function() {
-      var cis4 = teoria.note('c#4');
-      var db4 = teoria.note('db4');
+      let cis4 = teoria.note('c#4');
+      let db4 = teoria.note('db4');
 
       assert.deepEqual(cis4.interval(db4), teoria.interval('d2'));
     }
